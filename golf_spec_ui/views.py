@@ -17,7 +17,7 @@ def filterClubCategory(club, nameOfCategory):
 
 def filterClub(category, clubs):
     filteredLists = list(filter(lambda club: filterClubCategory(club, category), clubs))
-    sortedList = sorted(filteredLists, key=lambda club: club['loft'] )
+    sortedList = sorted(filteredLists, key=lambda club: (club['model'], club['loft']) )
     return sortedList
 
 
