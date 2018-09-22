@@ -8,7 +8,7 @@ body {
 
 .content{
     min-height: calc(100% - 80px - 51px);
-    width: 85%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -47,7 +47,7 @@ body {
 
 .club-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px
 }
 
