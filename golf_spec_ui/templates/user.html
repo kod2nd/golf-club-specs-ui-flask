@@ -2,7 +2,8 @@
 {% block content %}
 <div>
     <div>
-    <div class="user-name-title"> {{name}}'s Clubs </div>
+    <div class="user-name-title"> <b>CLUBS|</b>{{name}} </div>
+    <hr>
         {% for categories, clubs in clubCategories.items() %}
         <div class="club-spec">
             <h4 class="spec-title">{{categories.upper()}}</h4>
