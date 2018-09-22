@@ -33,14 +33,15 @@ def displayUser(user_id):
     name = user['name']
     clubs = user['clubs']
     
-    drivers = filterClub('driver', clubs)
-    woods = filterClub('wood', clubs)
-    hybrids = filterClub('hybrid', clubs)
-    irons = filterClub('iron', clubs)
-    wedges = filterClub('wedge', clubs)
-    putters = filterClub('putter', clubs)
+    clubCategories = {}
+    clubCategories['drivers'] = filterClub('driver', clubs)
+    clubCategories['woods'] = filterClub('wood', clubs)
+    clubCategories['hybrids'] = filterClub('hybrid', clubs)
+    clubCategories['irons'] = filterClub('iron', clubs)
+    clubCategories['wedges'] = filterClub('wedge', clubs)
+    clubCategories['putters'] = filterClub('putter', clubs)
     
-    return render_template('user.html', name=name,user_id=user_id, drivers=drivers, woods=woods, hybrids=hybrids, wedges=wedges, putters=putters)
+    return render_template('user.html', name=name, user_id=user_id, clubCategories=clubCategories)
 
 
 @app.route('/', methods=['GET'])
