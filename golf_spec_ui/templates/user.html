@@ -9,7 +9,7 @@
     <div>
         {% for categories, clubs in clubCategories.items() %}
         <div class="club-spec">
-            <h4 class="spec-title">{{categories.title()}}</h4>
+            <h4 class="spec-title">{{categories.upper()}}</h4>
             <div class="club-container">
                 {% for club in clubs %}
                 <div class="club">

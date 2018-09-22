@@ -2,12 +2,12 @@ body {
   background: white;
   margin: 0;
   color: black;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .content{
     min-height: calc(100% - 80px - 51px);
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -23,28 +23,33 @@ body {
 }
 
 .club-spec{
-    border: 1px dashed #A9A9A9;
+    /* border: 1px dashed #A9A9A9; */
     margin: 10px 0;
 }
 
 .spec-title {
-    text-align: center;
-    line-height: 40px;
-    background: #CAEBF2;
-    margin: 0;
-    height: 40px;
+    /* text-align: center; */
+    line-height: 20px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    box-shadow: 1px 2px #CAEBF2;
+    margin: 25px 0;
+    height: 20px;
+    width: 125px;
+    transform: skew(-20deg)
 }
 
 .club-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 15px
 }
 
 .club {
-    margin: 10px;
     border: 1px solid #efefef;
-    box-shadow: 1px 1px #FF3B3F;
+    box-shadow: 1px 2px #FF3B3F;
     padding: 15px;
+    border-radius: 1px;
 }
 
 .club-title {
