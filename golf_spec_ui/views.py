@@ -30,6 +30,7 @@ def displayIndex():
 def displayUser(user_id):
     response = requests.get(BASE_URL + 'users/{}'.format(user_id))
     user = response.json()
+    name = user['name']
     clubs = user['clubs']
     
     drivers = filterClub('driver', clubs)
@@ -39,7 +40,7 @@ def displayUser(user_id):
     wedges = filterClub('wedge', clubs)
     putters = filterClub('putter', clubs)
     
-    return render_template('user.html', user_id=user_id, drivers=drivers, woods=woods, hybrids=hybrids, wedges=wedges, putters=putters)
+    return render_template('user.html', name=name,user_id=user_id, drivers=drivers, woods=woods, hybrids=hybrids, wedges=wedges, putters=putters)
 
 
 @app.route('/', methods=['GET'])
