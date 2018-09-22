@@ -1,16 +1,53 @@
 {% extends "base.html" %} 
 
+
 {% block title %} {{user_id}} {% endblock %} 
+
+
 
 {% block header %}
 <div class="header-title">
-   User {{user_id}}
+    User {{user_id}}
 </div>
-{% endblock %}
+{% endblock %} 
+
 
 {% block content %}
 <div>
     <div> User Club Specs:</div>
-    <div> {{welcome_message}}</div>
+    <div class="club-spec" id="driver"> 
+            <div="title">Drivers</div>
+            <ul>
+                {% for driver in drivers %}
+                <li>
+                    {{driver['brand']}} {{driver ['model']}}
+                    <ul>
+                        <li>Loft: {{driver['loft']}}</li>
+                        <li>Lie: {{driver['lie']}}</li>
+                        <li>Length: {{driver['length']}}</li>
+                        <li>Shaft: {{driver['shaft']['brand']}} {{driver['shaft']['model']}} {{driver['shaft']['flex']}}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+    </div>
+    <div class="club-spec" id="wedge"> 
+        <div="title">Wedges</div>
+        <ul>
+            {% for wedge in wedges %}
+            <li>
+                {{wedge['brand']}} {{wedge ['model']}}
+                <ul>
+                    <li>Loft: {{wedge['loft']}}</li>
+                    <li>Lie: {{wedge['lie']}}</li>
+                    <li>Length: {{wedge['length']}}</li>
+                    <li>Shaft: {{wedge['shaft']['brand']}} {{wedge['shaft']['model']}} {{wedge['shaft']['flex']}}
+                    </li>
+                </ul>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </div>
 {% endblock %}
