@@ -32,6 +32,61 @@
                 {% endfor %}
             </ul>
     </div>
+
+    <div class="club-spec" id="wood"> 
+            <div="title">Woods</div>
+            <ul>
+                {% for wood in woods %}
+                <li>
+                    {{wood['brand']}} {{wood ['model']}}
+                    <ul>
+                        <li>Loft: {{wood['loft']}}</li>
+                        <li>Lie: {{wood['lie']}}</li>
+                        <li>Length: {{wood['length']}}</li>
+                        <li>Shaft: {{wood['shaft']['brand']}} {{wood['shaft']['model']}} {{wood['shaft']['flex']}}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+    </div>
+
+    <div class="club-spec" id="hybrid"> 
+            <div="title">Hybrids</div>
+            <ul>
+                {% for hybrid in hybrids %}
+                <li>
+                    {{hybrid['brand']}} {{hybrid ['model']}}
+                    <ul>
+                        <li>Loft: {{hybrid['loft']}}</li>
+                        <li>Lie: {{hybrid['lie']}}</li>
+                        <li>Length: {{hybrid['length']}}</li>
+                        <li>Shaft: {{hybrid['shaft']['brand']}} {{hybrid['shaft']['model']}} {{hybrid['shaft']['flex']}}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+    </div>
+
+    <div class="club-spec" id="iron"> 
+            <div="title">Irons</div>
+            <ul>
+                {% for iron in irons %}
+                <li>
+                    {{iron['brand']}} {{iron ['model']}}
+                    <ul>
+                        <li>Loft: {{iron['loft']}}</li>
+                        <li>Lie: {{iron['lie']}}</li>
+                        <li>Length: {{iron['length']}}</li>
+                        <li>Shaft: {{iron['shaft']['brand']}} {{iron['shaft']['model']}} {{iron['shaft']['flex']}}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+    </div>
+
     <div class="club-spec" id="wedge"> 
         <div="title">Wedges</div>
         <ul>
@@ -48,6 +103,24 @@
             </li>
             {% endfor %}
         </ul>
+    </div>
+
+    <div class="club-spec" id="putter"> 
+            <div="title">Putters</div>
+            <ul>
+                {% for putter in putters %}
+                <li>
+                    {{putter['brand']}} {{putter ['model']}}
+                    <ul>
+                        <li>Loft: {{putter['loft']}}</li>
+                        <li>Lie: {{putter['lie']}}</li>
+                        <li>Length: {{putter['length']}}</li>
+                        <li>Shaft: {{putter['shaft']['brand']}} {{putter['shaft']['model']}} {{putter['shaft']['flex']}}
+                        </li>
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
     </div>
 </div>
 {% endblock %}
