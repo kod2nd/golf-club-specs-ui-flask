@@ -10,10 +10,12 @@
         {% for categories, clubs in clubCategories.items() %}
         <div class="club-spec">
             <h4 class="spec-title">{{categories.title()}}</h4>
-            <ul>
+            <div class="club-container">
                 {% for club in clubs %}
-                <li>
+                <div class="club">
+                <div class="club-title">
                     {{club['brand']}} {{club ['model']}}
+                </div>
                     <ul>
                         <li>Club: {{club['number']}}</li>
                         <li>Loft: {{club['loft']}}</li>
@@ -22,9 +24,9 @@
                         <li>Shaft: {{club['shaft']['brand']}} {{club['shaft']['model']}} {{club['shaft']['flex']}}
                         </li>
                     </ul>
-                </li>
+                </div>
                 {% endfor %}
-            </ul>
+            </div>
         </div>
         {% endfor%}
     </div>

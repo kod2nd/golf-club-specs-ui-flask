@@ -1,6 +1,8 @@
 body {
   background: white;
   margin: 0;
+  color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .content{
@@ -11,7 +13,7 @@ body {
 
 .header {
   height: 80px;
-  border-bottom: rgb(155, 6, 155) solid 4px;
+  border-bottom: #FF3B3F solid 4px;
   text-align: center;
   font-weight: bold;
   font-size: 2.75em;
@@ -20,12 +22,42 @@ body {
   line-height: 80px;
 }
 
+.club-spec{
+    border: 1px dashed #A9A9A9;
+    margin: 10px 0;
+}
+
+.spec-title {
+    text-align: center;
+    line-height: 40px;
+    background: #CAEBF2;
+    margin: 0;
+    height: 40px;
+}
+
+.club-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.club {
+    margin: 10px;
+    border: 1px solid #efefef;
+    box-shadow: 1px 1px #FF3B3F;
+    padding: 15px;
+}
+
+.club-title {
+    font-weight: bold
+}
+
+
 .footer {
   position: absolute;
   right: 0;
   left: 0;
   width: 100%;
   padding: 1rem;
-  border-top: 1px solid black;
+  border-top: 1px solid #A9A9A9;
   text-align: center;
 }
