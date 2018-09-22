@@ -1,21 +1,45 @@
-from flask import render_template, request
+from flask import render_template
 import requests
 import json
 
 
 from golf_spec_ui import app
 
-def displayHello(name):
-    if request.method == 'GET':
-        response = requests.get('https://golf-specs-api.herokuapp.com/')
-        data = response.json()
-        # indexDict = json.loads(data)
-        print("STATUS CODEEEE", data["message"])
-        return render_template('index.html', name=name)
+BASE_URL = 'https://golf-specs-api.herokuapp.com/'
+
+
+def filterClubCategory(club, nameOfCategory):
+    if club['category'] == nameOfCategory:
+        return True
     else:
-        return render_template('index.html', name="no one")
+        return False
+
+
+def filterClub(category, clubs):
+    return list(filter(lambda club: filterClubCategory(club, category), clubs))
+
+
+def displayIndex():
+    response = requests.get(BASE_URL + 'users')
+    users = response.json()
+    return render_template('index.html', users=users)
+
+
+def displayUser(user_id):
+    response = requests.get(BASE_URL + 'users/{}'.format(user_id))
+    user = response.json()
+    clubs = user['clubs']
+    drivers = filterClub('driver', clubs)
+    wedges = filterClub('wedge', clubs)
+    return render_template('user.html', user_id=user_id, drivers=drivers, wedges=wedges)
+
 
 @app.route('/', methods=['GET'])
-@app.route('/<name>')
-def index(name=" "):
-    return displayHello(name)
+def index():
+    return displayIndex()
+
+
+@app.route('/users', methods=['GET'])
+@app.route('/users/<user_id>')
+def user(user_id):
+    return displayUser(user_id)

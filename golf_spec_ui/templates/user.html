@@ -1,0 +1,16 @@
+{% extends "base.html" %} 
+
+{% block title %} {{user_id}} {% endblock %} 
+
+{% block header %}
+<div class="header-title">
+   User {{user_id}}
+</div>
+{% endblock %}
+
+{% block content %}
+<div>
+    <div> User Club Specs:</div>
+    <div> {{welcome_message}}</div>
+</div>
+{% endblock %}
