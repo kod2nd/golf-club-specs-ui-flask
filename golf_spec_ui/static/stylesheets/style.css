@@ -2,7 +2,8 @@ body {
   background: white;
   margin: 0;
   color: black;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: monospace;
+  border-top: #FF3B3F 4px solid
 }
 
 .content{
@@ -22,19 +23,24 @@ body {
   line-height: 80px;
 }
 
+.user-name-title{
+    font-family: monospace;
+    font-size: 2.5em;
+    margin: 15px 0;
+}
+
 .club-spec{
-    /* border: 1px dashed #A9A9A9; */
     margin: 10px 0;
 }
 
 .spec-title {
-    /* text-align: center; */
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 25px;
     box-sizing: border-box;
     padding-left: 10px;
     box-shadow: 1px 2px #CAEBF2;
     margin: 25px 0;
-    height: 20px;
+    height: 25px;
     width: 125px;
     transform: skew(-20deg)
 }
@@ -47,7 +53,7 @@ body {
 
 .club {
     border: 1px solid #efefef;
-    box-shadow: 1px 2px #FF3B3F;
+    box-shadow: 1px 2px #A9A9A9;
     padding: 15px;
     border-radius: 1px;
 }

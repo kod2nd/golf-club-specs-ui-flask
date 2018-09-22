@@ -1,12 +1,8 @@
 {% extends "base.html" %} {% block title %} {{user_id}} {% endblock %} 
-{% block header %}
-<div class="header-title">
-    {{name}}'s Clubs
-</div>
-{% endblock %} 
 {% block content %}
 <div>
     <div>
+    <div class="user-name-title"> {{name}}'s Clubs </div>
         {% for categories, clubs in clubCategories.items() %}
         <div class="club-spec">
             <h4 class="spec-title">{{categories.upper()}}</h4>
@@ -14,10 +10,9 @@
                 {% for club in clubs %}
                 <div class="club">
                 <div class="club-title">
-                    {{club['brand']}} {{club ['model']}}
+                    {{club['brand']}} {{club ['model']}} ({{club['number']}})
                 </div>
                     <ul>
-                        <li>Club: {{club['number']}}</li>
                         <li>Loft: {{club['loft']}}</li>
                         <li>Lie: {{club['lie']}}</li>
                         <li>Length: {{club['length']}}</li>
