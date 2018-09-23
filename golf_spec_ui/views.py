@@ -22,13 +22,13 @@ def filterClub(category, clubs):
 
 
 def displayIndex():
-    response = requests.get(str(BASE_URL) + 'users')
+    response = requests.get('{}users'.format(BASE_URL))
     users = response.json()
     return render_template('index.html', users=users)
 
 
 def displayUser(user_id):
-    response = requests.get(str(BASE_URL) + 'users/{}'.format(user_id))
+    response = requests.get(BASE_URL + 'users/{}'.format(user_id))
     user = response.json()
     name = user['name']
     clubs = user['clubs']
