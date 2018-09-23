@@ -8,6 +8,8 @@ from golf_spec_ui import app
 
 BASE_URL = os.getenv('API_URL')
 
+print("HERREEEE",BASE_URL)
+
 
 def filterClubCategory(club, nameOfCategory):
     if club['category'] == nameOfCategory:
