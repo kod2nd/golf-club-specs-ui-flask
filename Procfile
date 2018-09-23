@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn golf_spec_ui:app
