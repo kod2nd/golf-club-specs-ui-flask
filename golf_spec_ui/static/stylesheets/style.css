@@ -6,6 +6,28 @@ body {
   border-top: #FF3B3F 4px solid
 }
 
+div.jumbotron {
+    background: url("https://images.unsplash.com/photo-1470883086119-f9dda6fdb990?ixlib=rb-0.3.5&s=97fc9e953ed7168a9c9b0687a904fc7c&auto=format&fit=crop&w=889&q=80");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: calc(100vh - 4px);
+    margin: 0
+}
+
+.jumbotron .container{
+    width: 70%
+}
+
+.navigate-user{
+    margin-bottom: 5px;
+}
+
+a.list-group-item {
+    font-weight: bold;
+    max-width: 500px;
+}
+
 .content{
     min-height: calc(100% - 80px - 51px);
     width: 70%;

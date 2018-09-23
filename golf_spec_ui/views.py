@@ -24,7 +24,7 @@ def filterClub(category, clubs):
 def displayIndex():
     response = requests.get(BASE_URL + 'users')
     users = response.json()
-    return render_template('index.html', users=users)
+    return render_template('index2.html', users=users)
 
 
 def displayUser(user_id):
