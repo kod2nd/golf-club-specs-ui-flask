@@ -1,24 +1,20 @@
-{% extends "base.html" %} 
-
-{% block title %} Home {% endblock %} 
-
-{% block header %}
-<div class="header-title">
-    Golf Specs
+{% extends "bootstrap/base.html" %} {% block styles %} {{super()}}
+<link rel="stylesheet" href="{{url_for('static', filename='stylesheets/style.css')}}"> {% endblock %} {% block title %}Home{% endblock %} {% block navbar %}
+<div class="navbar navbar-fixed-top">
+    <!-- ... -->
 </div>
-{% endblock %} 
-
-{% block content %}
-<dir>
-    <div> Welcome to Golf Club Specs, Please Select your user!</div>
-    <ul>
-        {% for user in users %}
-            <li>
-                <a href= {{ url_for('user', user_id= user['id'])}}>
-                    {{user['name']}}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-</dir>
+{% endblock %} {% block content %}
+<div class="jumbotron">
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>Keep Track Of Your Clubs</p>
+        <br>
+        <div class="navigate-user">NAVIGATE TO USER:</div>
+        <div class="list-group">
+                {% for user in users %}
+                <a class="list-group-item" href= {{ url_for('user', user_id= user['id'])}} role="button">{{user['name']}}</a>
+                {% endfor %}
+        </div>
+    </div>
+</div>
 {% endblock %}
