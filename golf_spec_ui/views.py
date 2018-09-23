@@ -4,8 +4,9 @@ import json
 
 
 from golf_spec_ui import app
+app.config.from_object('config')
 
-BASE_URL = 'https://golf-specs-api.herokuapp.com/'
+BASE_URL = app.config['API_URL']
 
 
 def filterClubCategory(club, nameOfCategory):
@@ -13,7 +14,6 @@ def filterClubCategory(club, nameOfCategory):
         return True
     else:
         return False
-
 
 def filterClub(category, clubs):
     filteredLists = list(filter(lambda club: filterClubCategory(club, category), clubs))
