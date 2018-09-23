@@ -6,9 +6,7 @@ import os
 
 from golf_spec_ui import app
 
-BASE_URL = os.getenv('API_URL')
-
-print("HERREEEE",BASE_URL)
+BASE_URL = 'https://golf-specs-api.herokuapp.com/'
 
 
 def filterClubCategory(club, nameOfCategory):
