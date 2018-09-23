@@ -1,12 +1,12 @@
 from flask import render_template
 import requests
 import json
+import os
 
 
 from golf_spec_ui import app
-app.config.from_object('config')
 
-BASE_URL = app.config['API_URL']
+BASE_URL = os.getenv('API_URL')
 
 
 def filterClubCategory(club, nameOfCategory):
