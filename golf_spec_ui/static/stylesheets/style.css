@@ -41,7 +41,6 @@ a.list-group-item {
     padding: 0;
     padding-left: 5px;
     font-size: 1em;
-    /* text-align: right; */
 }
 
 .header {
@@ -61,11 +60,6 @@ a.list-group-item {
   margin-top: 10px;
   margin-bottom: 0;
 }
-
-/* .club-spec {
-  margin: 10px 0;
-  box-sizing: border-box;
-} */
 
 .spec-title {
   font-size: 17px;
@@ -91,6 +85,7 @@ a.list-group-item {
   box-shadow: 1px 2px #a9a9a9;
   padding: 15px;
   border-radius: 1px;
+  animation: fadein 3s;
 }
 
 .club-title {
@@ -133,4 +128,9 @@ a.list-group-item {
 .jumbotron .container {
     width: 80%;
   }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
